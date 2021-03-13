@@ -6,14 +6,14 @@
 </head>
 <body>
 	<div class="perehod">
-		<video class="video current" id="vid1" width="100%" height="auto" autoplay="true" loop muted="true">
+		<video class="video current vart" id="vid1" width="100%" height="auto" autoplay="true" loop muted="true">
 		    	<source src="https://ia601508.us.archive.org/4/items/blueart/blueart.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 		</video>
-		<video class="video" id="vid1.1" width="100%" height="auto" autoplay="true" loop muted>
+		<video class="video vart" width="100%" height="auto" autoplay="true" loop muted>
 		    	<source src="https://ia601402.us.archive.org/23/items/merch_202103/merch.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 		</video>
-		<img class="Left" width="15%" height="auto" onclick="prev()" src="images/slideL.png"/>
-		<img class="Right" width="15%" height="auto" onclick="next()" src="images/slideR.png"/>
+		<img class="Left" width="15%" height="auto" onclick="prev('.video')" src="images/slideL.png"/>
+		<img class="Right" width="15%" height="auto" onclick="next('.video')" src="images/slideR.png"/>
 		<div class="container" onclick="mute('vid1')">	   
 		    <img src="images/art1.png" width="100%" height="auto"/>
 		</div>
@@ -22,29 +22,47 @@
 		<img src="images/part1.jpg" width="100%" height="auto"/>
 	</div>
 	<div class="perehod">
-		<div class="container">
+		<video class="video2 current vart" id="vid2" width="100%" height="auto" autoplay="true" loop muted="true">
+		    	<source src="https://ia601508.us.archive.org/4/items/blueart/blueart.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+		</video>
+		<video class="video2 vart" width="100%" height="auto" autoplay="true" loop muted>
+		    	<source src="https://ia601402.us.archive.org/23/items/merch_202103/merch.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+		</video>
+		<img class="Left" width="15%" height="auto" onclick="prev('.video2')" src="images/slideL.png"/>
+		<img class="Right" width="15%" height="auto" onclick="next('.video2')" src="images/slideR.png"/>
+		<div class="container" onclick="mute('vid2')">
 			<img src="images/art2.png" width="100%" height="auto"/>
 		</div>
 	</div>
 	<div class="instruct part2">
 			<img src="images/part2.jpg" width="100%" height="auto"/>
 	</div>
-	<div class="perehod" onclick="mute('vid2')">
-		<video class="video2" id="vid2" width="100%" height="auto" autoplay="true" loop muted>
+	<div class="perehod" >
+		<video class="video3 current vart" id="vid3" width="100%" height="auto" autoplay="true" loop muted="true">
+		    	<source src="https://ia601508.us.archive.org/4/items/blueart/blueart.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+		</video>
+		<video class="video3 vart" width="100%" height="auto" autoplay="true" loop muted>
 		    	<source src="https://ia601402.us.archive.org/23/items/merch_202103/merch.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 		</video>
-		<div class="container">
+		<img class="Left" width="15%" height="auto" onclick="prev('.video3')" src="images/slideL.png"/>
+		<img class="Right" width="15%" height="auto" onclick="next('.video3')" src="images/slideR.png"/>
+		<div class="container" onclick="mute('vid3')">
 			<img src="images/art3.png" width="100%" height="auto"/>
 		</div>
 	</div>
 	<div class="instruct part3">
 		<img src="images/part3.jpg" width="100%" height="auto"/>
 	</div>
-	<div class="perehod" onclick="mute('vid3')">
-		<video class="video2" id="vid3" width="100%" height="auto" autoplay="true" loop muted>
+	<div class="perehod">
+		<video class="video4 current vart" id="vid4" width="100%" height="auto" autoplay="true" loop muted="true">
+		    	<source src="https://ia601508.us.archive.org/4/items/blueart/blueart.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+		</video>
+		<video class="video4 vart" width="100%" height="auto" autoplay="true" loop muted>
 		    	<source src="https://ia601402.us.archive.org/23/items/merch_202103/merch.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
 		</video>
-		<div class="container">
+		<img class="Left" width="15%" height="auto" onclick="prev('.video4')" src="images/slideL.png"/>
+		<img class="Right" width="15%" height="auto" onclick="next('.video4')" src="images/slideR.png"/>
+		<div class="container" onclick="mute('vid4')">
 			<img src="images/art4.png" width="100%" height="auto"/>
 		</div>
 	</div>
@@ -68,7 +86,7 @@
 		.perehod{
 			margin: -4px;
 		}
-		.video{
+		.vart{
 			position: absolute;
 			padding-top: 30%;
 			left: 0;
@@ -77,12 +95,6 @@
 		}
 		.current{
 			display: block;
-		}
-		.video2{
-			position: absolute;
-			padding-top: 30%;
-			left: 0;
-			z-index: 0;
 		}
 		.Left{
 			position: absolute;
