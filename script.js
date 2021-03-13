@@ -35,6 +35,8 @@ function next(vidclass){
 			nextvideo.fadeIn(1000);
 			nextvideo.addClass('current');
 		}
+		currentvideo.pause();
+		nextvideo.play();
 	};
 function prev(vidclass){
 		var currentvideo=$(vidclass+'.current');
@@ -45,5 +47,7 @@ function prev(vidclass){
 		currentvideo.removeClass('current');
 		prevvideo.fadeIn(1000);
 		prevvideo.addClass('current');
+		currentvideo.pause();
+		prevvideo.play();
 	};
 
